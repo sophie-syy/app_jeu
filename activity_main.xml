@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#95b7eb">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp">
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Jeux de réflexe"
+                android:textColor="#6a7192"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/regle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Règles"
+                android:scaleType="centerInside"
+                android:src="@android:drawable/ic_menu_info_details" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#333333"
+                    android:gravity="center"
+                    android:text="Temps : 0"
+                    android:textColor="#c3d9ff" />
+
+                <TextView
+                    android:id="@+id/puissanceG"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#333333"
+                    android:gravity="center"
+                    android:text="Puissance: x1"
+                    android:textColor="#c3d9ff" />
+
+                <TextView
+                    android:id="@+id/scoreG"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#333333"
+                    android:gravity="center"
+                    android:text="Score : 0"
+                    android:textColor="#c3d9ff" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="Signification"
+                android:textColor="#6a7192" />
+
+            <TextView
+                android:id="@+id/g1"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="25dp"
+                android:background="#6a7192"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="Couleur du texte"
+                android:textColor="#6a7192" />
+
+            <TextView
+                android:id="@+id/g2"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:background="#6a7192"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!-- Answer Buttons -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnOui"
+                        android:layout_width="160dp"
+                        android:layout_height="75dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="#6a7192"
+                        android:text="OUI"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnNon"
+                        android:layout_width="160dp"
+                        android:layout_height="75dp"
+                        android:background="#6a7192"
+                        android:text="NON"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/pause"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Pause"
+                android:scaleType="centerInside"
+                android:src="@android:drawable/ic_media_play" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/arrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Recommencer"
+                android:scaleType="centerInside"
+                android:src="@android:drawable/ic_popup_sync" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
