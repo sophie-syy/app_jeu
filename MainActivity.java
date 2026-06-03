@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private int seconds = 0;
     private int score = 0;
     private int streak = 1;
-    private int incorrectCount = 0;
     private boolean gameRun = false;
     private boolean paused = false;
 
@@ -136,14 +135,6 @@ public class MainActivity extends AppCompatActivity {
         // Vérifie si la réponse est correcte
         boolean match = compareColor(texte, couleurAffichee);
         boolean isCorrect = (answerYes && match) || (!answerYes && !match);
-
-        // Si 3 erreurs ou plus, force la prochaine réponse à être correcte
-        if (incorrectCount >= 3) {
-            isCorrect = true;
-            incorrectCount = 0;
-        } else if (!isCorrect) {
-            incorrectCount++;
-        }
 
         // Met à jour le score et la puissance
         if (isCorrect) {
