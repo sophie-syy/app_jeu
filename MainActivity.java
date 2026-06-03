@@ -199,14 +199,6 @@ public class MainActivity extends AppCompatActivity {
     private void startGame() {
         gameRun = true;
 
-        // Initialise le jeu s'il n'a pas été pausé
-        if (!paused) {
-            seconds = 0;
-            score = 0;
-            streak = 1;
-            RandomWord(g1, g2);
-        }
-
         paused = false;
         updateScore();
 
