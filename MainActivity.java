@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 .setMessage("• Pour avoir bon, il faut que le mot du haut corresponde à la couleur du bas.\n" +
                         "• Appuie sur OUI si c'est correct, NON sinon.\n" +
                         "• Chaque bonne réponse augmente ta \"puissance\" et multiplie les points gagnés (max:5).\n" +
-                        "• Le jeu dure 60 secondes.\n\n")
+                        "• Le jeu dure 30 secondes.\n\n")
                 .setPositiveButton("Fermer", (dialog, which) -> {if (paused) startGame();})
                 .setCancelable(false) // interdit de fermer la fenêtre autre qu'appuié sur les boutons
                 .show();
