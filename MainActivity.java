@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Génère le prochain mot et affiche le feedback
-        updateNext();
+        update(g1, g2);
         showFeedback(isCorrect);
     }
 
@@ -161,12 +161,6 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    /** Génère le prochain mot et met à jour l'interface */
-    private void updateNext() {
-        RandomWord(g1, g2);
-        updateScore();
-    }
-
     /** Affiche un retour visuel (couleur) après la réponse
      *  isCorrect couleur du fond coloré */
     private void showFeedback(boolean isCorrect) {
@@ -178,8 +172,9 @@ public class MainActivity extends AppCompatActivity {
         timerHandler.postDelayed(() -> g2.setBackgroundColor(0xFF6a7192), 300);
     }
 
-    /** Affiche deux mots aléatoires dans la TextView, un avec une couleur aléatoire */
-    private void RandomWord(TextView g1, TextView g2) {
+    /** Affiche deux mots aléatoires dans la TextView, un avec une couleur aléatoire
+     * Et Met à jour l'affichage du score et de la puissance */
+    private void update(TextView g1, TextView g2) {
         int idx1 = random.nextInt(NOMS.length);
         int idx2 = random.nextInt(NOMS.length);
         int colorIdx = random.nextInt(COLORS.length);
@@ -187,20 +182,17 @@ public class MainActivity extends AppCompatActivity {
         g1.setText(NOMS[idx1]);
         g2.setText(NOMS[idx2]);
         g2.setTextColor(COLORS[colorIdx]);
-    }
 
-    /** Met à jour l'affichage du score et de la puissance */
-    private void updateScore() {
         scoreDisplay.setText("Score : " + score);
         streakDisplay.setText("Puissance: x" + streak);
     }
 
     /** Démarre le jeu et le timer */
     private void startGame() {
+        if (gameRun) return;
         gameRun = true;
-        
-        RandomWord(g1, g2);
-        updateScore();
+
+        update(g1, g2);
 
         // Lance le timer
         timerRunnable = new Runnable() {
