@@ -198,8 +198,8 @@ public class MainActivity extends AppCompatActivity {
     /** Démarre le jeu et le timer */
     private void startGame() {
         gameRun = true;
-
-        paused = false;
+        
+        RandomWord(g1, g2);
         updateScore();
 
         // Lance le timer
