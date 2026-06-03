@@ -197,7 +197,6 @@ public class MainActivity extends AppCompatActivity {
 
     /** Démarre le jeu et le timer */
     private void startGame() {
-        if (gameRun) return;
         gameRun = true;
 
         // Initialise le jeu s'il n'a pas été pausé
